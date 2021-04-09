@@ -1,0 +1,1547 @@
+/* selector {
+    property: value;
+    propertytwo: value;
+} */
+
+.box1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* الخط /*
+  color: #fde8cd; /* لون الخط */
+  font-weight: bold; /* نوع الخط */
+}
+
+.div {
+  background-color: red; /* color name  */
+  background-color: rgb(0 0 0 / 50%); /* red green blue / Alpha Channel  */
+  background-image: he url(../img/orion-wal.png); /* Background-img */
+  background-color: #025955; /* Color Hex Code */
+  background-repeat: no-repeat; /*
+    no-repeat => لا تكررها  
+    repeat كررها 
+    repeat-x =>  X كررها بعامود 
+    repeat-y => Y كررها بعامود 
+    */
+  background-attachment: scroll; /* attachment => اذا بدك تخلي الصورة تتحرك او لا :
+    scroll => مابتتحرك معك الخلفية اذا فيه محتوى كثير
+    fixed => بتتحرك  */
+
+  /* top = اعلى bottom = اسفل Left = يسار
+    right = يمين  */
+  background-position: left top; /* position => تحريك من مكانها 
+    (right)(left)(right bottom)(center bottom)فيه كثير انواع لتحرك مثال 
+    (background-position: 200px;)او بتقدر تحركها بالبكسل مثال
+    */
+  background-size: cover; /* 
+    size => بطريقة احترافية background تتحكم بال  
+    cover => ملء الشاشة 
+    contain => الصورة كاملة مهما كبرت او صغرت بالصفحة الصورة بتكون كاملة */
+}
+.ha1 {
+  /* Top Right Bottom Left */
+  /* 10px 10px 10px 10px */
+  padding: 10px;
+
+  /* Top Right Bottom Left */
+  /* 10px 20px 10px 20px */
+  padding: 10px 20px;
+
+  /* Top Right Bottom Left */
+  /* 10px 20px 15px 20px */
+  padding: 10px 30px 15px;
+
+  /* Top Right Bottom Left */
+  /* 0 0 10px; */
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: auto;
+  width: 70%;
+}
+.adress {
+  background-color: #ddd;
+  padding: 10px;
+  margin: auto; /* or margin-top: auto; or margin-bottom: auto; or 15px */ /* المارجين بتقبل القيمة بالسالب */
+  width: 80%;
+}
+.ufus {
+  background-color: #eee;
+  padding: 10px;
+  width: 50%;
+  margin: auto;
+  /* border فيه عندنا 3 خصائص للـ  */
+  /* border-width: 10px; => عرض الحواف */
+  border-width: 10px;
+  /* border-color: red; => لون الحواف */
+  border-color: teal;
+  /* border-syle: solid; => شكل الحواف */
+  border-style: solid;
+  /* تنعيم الحواف */
+  border-radius: 4px;
+  /* هون اذا بدك يكون البوردير غير مكتمل */
+  border-left-color: transparent;
+}
+.mohk3 {
+  background-color: #ddd;
+  padding: 10px;
+  width: 400px;
+  border-width: 81px;
+  border-left: solid red 7px;
+  /* Outline مو لازم تتعمق فيها كثير بس عريف شو بتعمل  */
+  outline-color: blue;
+  outline-width: 7px;
+  outline-style: ridge;
+}
+
+/*
+
+  Block
+
+  - Take Full Width If No Width
+  - Add Line Break
+  - Respect Padding, Margin, Width, Height
+
+  Inline
+
+  - Do Not Repsepct Width, Height
+  - Respect Padding And Margin [ Just Wight + Left ]
+  - Do Not Add Line Break
+  - Allow Elements Before And After It in The Same Line
+
+  Inline-Block
+
+  - Allow Elements Before And After It in The Same Line
+  - Respect Padding, Margin, Width, Height
+
+*/
+.L2-G {
+  margin: 10px;
+  width: 300px;
+  height: 23px;
+}
+.L3-G {
+  background-color: #ddd;
+  padding: 10px;
+  width: 50%;
+  display: inline-block; /* none => يعني العنصر مختفي تماما  */
+  margin: 3px;
+}
+.first {
+  background-color: red;
+  margin: 10px 0;
+  display: none; /* يختفي نهائيا */
+}
+.first {
+  visibility: hidden; /* العنصر مخفي لكن مكانه محفوظ */
+}
+
+/* Grouping => اذا فيه عناصر السمات يلي فيها مشتركة */
+/* : مثال */
+.L2-G,
+.L3-G,
+.my-p {
+  background-color: #eee;
+  padding: 10px;
+}
+
+/* Nesting => عُشْ للتعديل اذا كان فيه عنصر داخل عنصر */
+/* : مثال  */
+/* div p {
+  color: white;
+  font: icon;
+} */
+/* أول اذا كان فيه كلاس */
+div .margion {
+  background-color: crimson;
+  margin: 10px;
+  padding: 10px;
+}
+divh {
+  background-color: black;
+  font-family: monospace;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  /* min-width =>  من حجم معين */
+  /* max-width =>  الى حجم معين */
+  width: fit-content; /* يعني بيصير المربع على قد الكلام */
+  overflow: scroll; /* اذا بدك تخفي الكلام الزيادة */
+  /* visible => تلقائي الكلام طالع */
+  /* scroll => بتقدر داخل المربع تنزل */
+  /* hidden => اخفاء الكلام اذا طلعت من المربع */
+  /* auto => تلقائي بتعمل سكرول او لا */
+}
+
+/* 
+  Text Colour 
+    -Background-color
+  -Color
+  Text Shadow
+  -Syntax => text-shadow: H-Shadow V-Shadow Blur Color
+*/
+.test-text {
+  background-color: #ddd;
+  /* color: darkgreen; */
+  text-shadow: 0.5px 0 0 red, 1px 0 0 blue;
+}
+
+/* 
+  Text Alignment
+  -Alignment => مكان التيكست
+  -Direction => لغة الكلام rtl or ltr
+  -vertical Alaignment => اذا كان فيه صورة مثلا وبدك توسطها بين الكلام 
+*/
+
+.elzero-ul {
+  background-color: #ddd;
+  text-align: center;
+  direction: ltr;
+}
+/* vertical مثال على ال  */
+.yblui {
+  vertical-align: middle;
+}
+
+/* 
+  Text - Transform => للتحكم في النص اذا بدك الحروف كلها كبيرة او بس اول الكلام 
+  Text - Decoration => اذا بدك تحط خط اسفل النص او في وسطه
+*/
+.insa-oppo {
+  background-color: #ddd;
+  padding: 10px;
+  margin: 2px;
+  display: inline-block;
+  min-width: fit-content;
+  text-transform: capitalize;
+  text-decoration: underline;
+  /* اذا بدك تلون الخط يلي تحت النص او فوقه او وسطه */
+  text-decoration-color: red;
+  color: blue;
+}
+.ma3rof {
+  background-color: #0c0440;
+  font-size: 40px;
+  padding: 5px;
+  margin: 15px 0;
+  display: inline-block;
+  border-radius: 9px;
+  text-decoration: none;
+  color: white;
+  box-shadow: red green;
+}
+/* 
+Text Spacing
+- letter spacing => المسافة يلي بين الاحرف
+- Indentation => المساحة الفاضية قبل الكلام 
+- line height => المسافة بين الأسطر 
+- word Spacing + wraping + white Space
+*/
+.injoy {
+  letter-spacing: 2px;
+  text-indent: 50px;
+  line-height: 1;
+  width: 400px;
+  /* المسافة بين الكلمات */
+  word-spacing: 5px;
+  white-space: nowrap; /* => اذا بدك تكمل الكلام على نفس السطر
+  white-space: normal; => اذا بدك الكلام يسوي مسافة ويصير بسطر
+  */
+  /* word-break: break-all or break-word */
+  word-break: break-word;
+}
+
+/* 
+  -overflow: hidden; => أي كلام خارج الباكجراوند يختفي
+  -text-overflow: ellipsis => بتخفي الكلام يلي طالع وبتحط بداله 3 نقاط 
+*/
+.colermah {
+  background-color: grey;
+  width: 300px;
+  padding: 10px;
+  white-space: nowrap;
+}
+.gridf {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+  /* اذا بدك تعمل شفافية للعصر كامل  */
+  opacity: 0.5;
+  width: 400px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+  color: green;
+  border: 5px solid rgb(1, 130, 204);
+}
+.khanjaji {
+  border: 2px solid;
+  /* بيصير اذا بتعدل اللون ب الديف بيتعدل هون ومافيه داعي تعدله يعني بيصير بيورث منه  inherit  اذا ضفت  */
+  border-color: inherit;
+}
+.youtribll {
+  font-size: 10px;
+
+  font-size: 10em; /* em => Time  */
+
+  font-size: 10rem; /* rem => Root Time  */
+
+  font-size: 10vw; /* vw => view Port Width */
+
+  font-size: 10vh; /* vw => view Port height */
+
+  font-style: italic; /* ستايل الخط */
+
+  font-variant: small-caps; /* يحول النص الى احرف كبيرة بشكل صغير */
+
+  font-weight: bold; /* وزن الخط */
+
+  cursor: cell; /* تغيير شكل الماوس عندما تضعها عند العنصر */
+}
+
+/* 
+-float 
+-clear 
+*/
+
+.parent {
+  background-color: rgb(25, 133, 160);
+  padding: 10px;
+  overflow: hidden; /* لكن اوفر فلو مو حل  */
+  z-index: 50;
+}
+.parent div {
+  background-color: #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  display: inline;
+  width: 25%;
+  float: left;
+}
+.clear {
+  clear: both; /* ف منحط هاد منشان يحل مشكلة الفلوت طبعا منمسح اوفرفلو */
+}
+
+/* حسابات */
+/* 
+  Content width Is 100%
+  6 space 2% × 6 => 12% width من محتوى 
+  88% مساحة متوفرة 
+  5 Element The Width is: 88% / 5
+*/
+.forjin1,
+.forjin2,
+.forjin3,
+.forjin4,
+.forjin5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #ddd;
+  float: left;
+  width: calc(88% / 5);
+  margin-left: 2%;
+}
+
+/* اذا بالبكسل
+  Content width Is 100%
+  6 space 15px × 6 => 90px width من محتوى 
+  100% - 90px مساحة متوفرة 
+  5 Element The Width is: (100% - 90px) / 5
+*/
+.forjin6,
+.forjin7,
+.forjin8,
+.forjin9,
+.forjin10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #ddd;
+  float: left;
+  width: calc((100% - 90px) / 5);
+  margin-left: 15px;
+}
+/* position => لتحريك اي شيء بالصفحة وين مابدك
+  - static => default
+  - Relativ => يتحرك العنصر بناءا على نفسه
+  - Absolute => يتوزع بناءا على الصفحة
+  - Fixed => العنصر بيتحرك معك اذا سويت سكرول
+  - Sticky => العنصر بينزل معك لما بتعمل سكرول مثل الناف\
+  Z-index
+  => هي اولوية العنصر فوق عنصر اخر 
+*/
+.relativ {
+  background-color: red;
+  text-align: center;
+  padding: 10px;
+  width: 100px;
+  height: 50px;
+  position: relative;
+  top: 70px;
+  right: -137px;
+}
+.relativ1 {
+  background-color: blue;
+  padding: 10px;
+  width: 100px;
+  height: 50px;
+}
+
+.absolute-and-fixed {
+  background-color: seagreen;
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  position: absolute; /* Fixed اذا ضفت هي بيصير بيتحرك العنصر معك مها نزل بالصفحة */
+  bottom: 0;
+  right: 0;
+}
+.parent {
+  position: sticky;
+  top: 10px;
+}
+
+.z-index {
+  background-color: rgb(231, 193, 21);
+  padding: 10px;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  z-index: 5; /* كل ما زاد الرقم كل مازادت اولويته انه يكون فوق العنصر */
+}
+.z-index1 {
+  background-color: rgb(131, 255, 30);
+  padding: 10px;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+}
+/* معلومة على السريع */
+/* lists Style => ul and li تتحكم بال  
+  - img -> للصور
+  - position
+  - Type => للتحكم في الايقونات
+*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-spacing: 0;
+}
+table td {
+  padding: 15px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+table thead td {
+  background-color: #f44336;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-color: #f35246;
+}
+
+.normaltext {
+  background-color: red;
+  color: #fff;
+}
+.textnone {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+/* هي اذا حطيتها بيصير لما تجيب الماوس فوقها بيظهر اللون او اي شي ثاني */
+a:hover {
+  color: #f35246;
+}
+/* pseudo Element => العناصر المزيفة */
+
+/* cheked => لما بتختار الخيار بيتغير لونه */
+.ch:checked + label {
+  color: blueviolet;
+}
+/* يعني اذا ضغطت على الرابط بيتغيير لونه  */
+a:visited {
+  color: black;
+}
+
+/* اي عنصر فاضي  */
+/* div:empty {
+  border: 2px solid blue;
+} */
+.in {
+  border: 2px solid blue;
+  background-color: #ddd;
+  outline: none;
+}
+/* لما بتضفط على المربع بيتغير لونه او اي شي */
+.in:focus {
+  border-color: mediumseagreen;
+  background-color: white;
+}
+.one-1 span {
+  background-color: red;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 3em;
+  color: white;
+}
+/* للتحكم في اول كلمة */
+.two-2::first-letter {
+  background-color: red;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 3em;
+  color: white;
+}
+/* لتغيير لون السطر ومهما كبرت بالصفحة بيضل السطر الاول نفس  اللون ة */
+.three-3::first-line {
+  background-color: teal;
+  color: #fff;
+}
+/* لتغيير لون السليكت */
+.three-3::selection {
+  background-color: black;
+  color: yellow;
+}
+.pointer {
+  margin-bottom: 20px;
+  overflow: hidden;
+  /* عداد */
+  /* بتقدر تحط اي اسم */
+  counter-increment: hello-out;
+}
+.use {
+  padding: 10px;
+  float: left;
+  background-color: #ddd;
+  width: 50px;
+  height: 55.5px;
+  text-align: center;
+  font-size: 50px;
+  margin-right: 20px;
+}
+.number1 {
+  padding: 10px;
+  padding-top: 19px;
+  background-color: #ddd;
+  float: left;
+  width: 600px;
+  height: 45px;
+  position: relative;
+  counter-increment: hello-welcome;
+}
+
+.number1::before {
+  /* هي ضروري بتحطها من شان تتفعل */
+  /* content: counter() => اضافة العداد داخل القوس بتحط الاسم يلي حطيته فوق*/
+  /* content: attr() =>  بتقبل كمان اتربيوت الاتربيوت هذا ممكن يكون كلمة ممكن يكون صورة او رابط */
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+  /* transparent => لون شفاف */
+  border-color: transparent #009688 transparent transparent;
+}
+.number1::after {
+  /*هي ضروري بتحطها منشان تتفعل*/
+  content: "";
+  background-color: #009688;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+}
+
+/* 
+
+  Vendors Prefixes
+
+  chrome 
+  Safari 
+  edge
+  لازم تحط هدول مشان تشتغل بكل البرامج والاصداراته
+  -webkit- => Chrome , Safari , New Opera Version
+  -moz- => Firefox
+  -ms- => Ie , Edge 
+  -o- => old version of Opera 
+*/
+/* مثال */
+
+/* 
+.class {
+  -webkit-border-radius: 10px;
+  -moz-border-redius: 10px;
+  -o-border-redius: 10px;
+  -ms-border-redius: 10px;
+  border-redius: 10px:
+
+منشان تريح راسك نزل اداة 
+css-auto-prefix
+وهي تلقائياَ بتحط كل هاد
+*/
+
+.clssera {
+  background-color: tomato;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  /* Border-redius => حواف الحدود */
+  border-radius: 3px;
+  /* بتقدر تحط قيمتين  */
+  /* وكمان ممكن تكون بكسل وممكن تكون نسبة مئوية */
+  border-top-left-radius: 20px 10px;
+  border-bottom-right-radius: 20px;
+}
+
+.box-shadow {
+  background-color: teal;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  /* box-shadow => ظل الصندوق  */
+  /* H-Shadow | V-Shadow | Blur | Color | Inset */
+  /* بتقدر تحط اكثر من قيمة ولون */
+  /* مثال */
+  box-shadow: 13px 13px 2px red, -20px -6px 51px 0px black inset, 20px -7px 0px blue, -16px -14px 0 green,
+    -20px 20px 0 cadetblue;
+}
+.box-shadow:empty {
+  border: none;
+}
+/* box-size => تحط البوكسات مجنب بعض */
+/* يعني بهالمثال هاد */
+.box-size {
+  width: 600px;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ddd;
+}
+.boxsi {
+  background-color: #eee;
+  width: 300px;
+  float: left;
+  padding: 10px;
+  border: 10px solid blue;
+  /* منشان تحط المبربعين مجنب بعض ضيف */
+  box-sizing: border-box;
+}
+.transition {
+  background-color: #009688;
+  width: 400px;
+  height: 60px;
+  padding: 10px;
+  padding-top: 45px;
+  text-align: center;
+  font-size: 20px;
+
+  /* Transition =>  التحكم في الانتقالات 
+  - Duration
+  - property
+  - Delay 
+  - Timing Function */
+
+  /* transition-duration => مدة الانتقال */
+  transition-duration: 0.5s, 1s; /* s => second | ms => اجزاء الثانية */
+  /* transition-delay => الوقت يلي بياخذه عشان ينتقل من حالة لحالة */
+  transition-delay: 0.2s;
+  /* transition-property => هي الخاصية بتخليك تحدد الخواص يلي بدك تطبق عليها الترانزيشن */
+  transition-property: width, background-color, margin-top, margin-left;
+  /* transition-timing-function => طريقة التحرك */
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.transition:hover {
+  background-color: rgb(22, 123, 255);
+  width: 480px;
+  height: 70px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* 
+  The !important Declaration => يعني هي الاولوية الها بأنها تلون او تغير الخط الخ
+*/
+/* مثال  */
+.important {
+  width: 300px;
+  padding: 30px;
+  background-color: #0c0440 !important;
+  color: white !important;
+  text-align: center;
+  text-transform: capitalize;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.important:hover {
+  background-color: rgb(168, 0, 0) !important;
+  width: 400px;
+  padding: 35px;
+  color: rgb(255, 255, 255) !important;
+}
+/* 
+  CSS Variables 
+  - Global Variable
+  - Local Variable
+  var(Variable Name, Fallback Value)
+*/
+
+:root {
+  --mainColor: blue;
+  --mainPadding: 10px;
+}
+
+.local {
+  background-color: cadetblue;
+  color: var(--mainColor, red);
+  padding: calc(20px + var(--mainPadding, 20px));
+  border: 1px solid;
+  width: 300px;
+}
+/* 
+  Flexible Box  
+  For Parent 
+  - Display : Flex => To Start Flexible Box 
+  - flex-direction: row => Default Value , row-reverse => يعكس امكنة الكلام
+  , column => بسوي الصفوف عامودياً
+  - flex-wrap: wrap: nowrap; => Default Value, wrap => بينزل اي عنصر زيادة في صف جديد	
+  , wrap-reverse => بيقلب العناصر وبيصير العنصر الاخير هو بالصف الاول 
+  - flex-flow [Flex-direction] + [Flex-wrap]
+  ----
+  - justify-content: flex-start; Default Value, flex-end => العناصر كلها رايحة لليمين
+  , center => بيوسط العنصر عاموديا,| space-between => بيحط ال سبيس الباقي يلي من 100% بين العناصر
+  , space-around => بيحط السبيس حوالين الاليمينت,| space-evenly => هي بتدمج السبيس بتوين و سبيس اراوند
+  - align-items: 	 => Default Value, flex-start | flex-end | center
+  - align-content => بياخد العناصر كلها وبينقلها مع بعض عكس يلي فوق 
+  , flex-start , flex-end 
+    For Child
+  - flex-gorw: 0 => Default 
+  - flex-shrink: 1 => Default 
+  - order: 0; => Default => التبديل بين مواقع المربعات بكل سهولة
+  - flex-basis: auto; Default => يعني بيوزع حجم العناصر اوتوماتيك, بتحط بالبكسل
+  - flex: [flex-gorw] + [flex-shrink] + [flex-basis] => default [ 0 1 Auto ]
+  display: inline-flex => اذا بدك عنصرين يجوا مجنب بعض
+  - align-self: auto; => Default => يعني محاذات العنصر نفسه
+  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.flex div {
+  background-color: #f35246;
+  color: white;
+  width: calc(98% / 4);
+  text-align: center;
+  padding: 20px;
+}
+.alginitems {
+  width: 180px;
+  height: 50px;
+  border: 1px solid #009688;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #009688 !important;
+  font: message-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.alginitems:hover {
+  background-color: #009688;
+  color: white !important;
+}
+
+.flex-child {
+  background-color: #eee;
+  width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+}
+.flex-child div {
+  background-color: #f44336;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+  flex-grow: 1;
+}
+
+/*  
+  Filters
+  فيه كثيير فلاتر بس هذي اهمهم
+  - grayscale => ابيض وأسود
+  - blur => تغبيش
+  - invert => عمى الوان
+*/
+
+.freepik {
+  transition: 0.3s;
+  filter: blur(30px);
+}
+.freepik:hover {
+  filter: blur(0);
+}
+
+/* 
+  Gradients 
+  linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2, ....)
+  for input => border-image-source: linear-gradient(90deg, red 0, red 50%, green 50%, green 100%);
+  border-image-slice: 1; => هي مشان تتفعل 
+*/
+
+.gradient {
+  background-image: linear-gradient();
+  background-color: #eee;
+  width: 400px;
+  height: 200px;
+  margin: 20px auto;
+  position: relative;
+  border: none !important;
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  padding: 10px;
+}
+.gradient::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  background-color: #009688;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right,
+    #00ce72 20%,
+    #6500ce 20%,
+    #6500ce 40%,
+    #ff00b8 40%,
+    #ff00b8 60%,
+    #ff0000 60%,
+    #ff0000 70%,
+    #00796b 70%,
+    #00796b 90%,
+    #78909c 90%,
+    #78909c 100%
+  );
+}
+.gradient h3 {
+  color: #78909c;
+  font: caption;
+  font-size: 2em;
+}
+/* for input */
+.gradient-2 {
+  background-color: #eee;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  width: 180px;
+  border: none;
+  align-self: center;
+  border-bottom: 2px solid red;
+  border-image-source: linear-gradient(90deg, red 0, red 50%, green 50%, green 100%);
+  border-image-slice: 5;
+  outline: none;
+  caret-color: red;
+}
+/* Caret Color => تغيير لون علامة الكتابة 
+  Pointer Events => لتوقيف الزر */
+.pointer-con input {
+  caret-color: red;
+}
+.pointer-con a {
+  /* بيصير الرابط كنص عادي */
+  pointer-events: none;
+}
+/* ------------- */
+/* Grid 
+  parent
+  - Display: grid; | inline-grid 	
+  - grid-template-columns =>  الاعمدة بالطول ,
+    [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat(), Mix ] 
+  الفرق بين الاوتو والفراكشن ان الاوتو خجولة اما الفراكشن طماعة
+  - grid-template-rows => الاعمدة بالعرض
+    [Number Of Rows Height In] => [Px, %, Auto, Fraction, Repeat(), Mix]
+  - Gap: [Row Gap] + [Column Gap] 
+  - justify-content
+  - align-items
+  - grid-template-areas
+  Child
+  - grid-column => [grid-row-start] + [grid-column-end] => الاعمدة رح تبدأ منين ورح تنتنهي فين(بالعرض)
+  1 / 3 => من عامود لعامود span 3 => بتاخد مكان لثلاث اعمدة
+  - grid-row => [grid-row-start] + [grid-row-end] => الاعمدة رح تبدأ منين ورح تنتنهي فين(بالطول) 
+  - grid-area: [grid-row-start] [grid-row-start] [grid-row-end] [grid-column-end]
+  - minmax() => من مساحة لمساحة محددة وهي اقوى من الفراكشن
+  - Auto fill => بتعبي الفراغات يلي بالصفحة على حسب حجمها */
+.grid {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px 10px;
+}
+.grid div {
+  background-color: tomato;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.grid-column {
+  grid-column: span 4;
+}
+.grid-row {
+  grid-row: span 2;
+}
+.grid-2 {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px 10px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.grid-2 div {
+  background-color: tomato;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.grid div p {
+  font-size: 20px;
+  padding-top: 15px;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline;
+}
+.page-01 {
+  height: 100vh;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas: "logo logo nav nav nav nav nav nav nav nav" "cont cont cont cont cont cont cont cont side side"
+    "foot foot foot foot foot foot foot foot foot foot";
+}
+.hamzah {
+  grid-area: logo;
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+nav {
+  grid-area: nav;
+  background-color: rgb(25, 133, 160);
+  color: white;
+  padding: 10px;
+}
+section {
+  grid-area: cont;
+  background-color: slategrey;
+  color: white;
+  padding: 10px;
+}
+aside {
+  grid-area: side;
+  background-color: rgb(151, 162, 173);
+  color: white;
+  padding: 10px;
+}
+footer {
+  grid-area: foot;
+  background-color: midnightblue;
+  color: white;
+  padding: 10px;
+}
+.minmax-auto {
+  margin: 20px auto;
+  height: 500px;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.minmax-auto div {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+/* 2D Transform
+  - ScaleX => بيخليه العنصر كامل يتمدد بمحور اكس
+  - ScaleY => بيخليه العنصر كامل يتمدد بمحور واي
+  - Scale => اختصار للاثنين
+  - Rotate => اذا بدك تلف العنصر 
+  - الوحدات
+  deg => Degree => الدرجات
+  rad => Radians 
+  grad => Gradians 
+  turn => Turn => لفة. 
+  -- طبعا اذا بدك تدمج الروتيت والسكيل لازم تحطهم مع بعض
+  -- transform: scale(1.2) rotate(3deg); مثــــال
+  - translate => تحريك العنصر من مكان لمكان 
+  - skwe => الانحراف
+  - skweX => الانحراف على بعد اكس
+  - skweY => الانحراف على بعد واي
+  - matrix
+  Syntax => matrix(scaleX(), skew(), skewX(), scaleY(), translateX(), translateY()) 
+  ----
+  transform-origin
+  Syntax
+  default Value => 50% 50% 0
+  2D Transform => transform-origin(X,Y)
+  3D Transform => transform-origin(X,Y,Z)
+  X-Axis
+  -Css Unit [Px, em, rem]
+  -% 
+  -keyword
+  -- Left = 0%
+  -- Center = 50%
+  -- Right => 100%
+  Y-Axis
+  -Css Unit [Px, em, rem]
+  -% 
+  -keyword
+  -- Top = 0%
+  -- Center = 50%
+  -- Bottom => 100% */
+.scale {
+  background-color: #ddd;
+  width: 220px;
+  height: 220px;
+  font-weight: bold;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scale span {
+  background-color: #ca4747;
+  width: 90%;
+  height: 90%;
+  color: white;
+  font-weight: bold;
+  margin: 20px auto;
+  transform: none;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+.scale span:hover {
+  transform: scale(1) rotate(3deg) translate(-50%, 50%);
+  opacity: 0.7;
+}
+.skew {
+  background-color: #ddd;
+  width: 220px;
+  height: 220px;
+  font-weight: bold;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skew span {
+  background-color: #ca4747;
+  width: 90%;
+  height: 90%;
+  color: white;
+  font-weight: bold;
+  margin: 20px auto;
+  transform: none;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+.skew span:hover {
+  transform: skew(-13deg, 2deg);
+  opacity: 0.7;
+}
+.matrix {
+  background-color: #ddd;
+  width: 220px;
+  height: 220px;
+  font-weight: bold;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.matrix span {
+  transform-origin: 0% 50%;
+  transform: rotate(300deg) !important;
+  background-color: #ca4747;
+  width: 90%;
+  height: 90%;
+  color: white;
+  font-weight: bold;
+  margin: 20px auto;
+  transform: none;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  position: relative;
+}
+.matrix span:hover {
+  transform: matrix(1.2, 0.2679, 0, 1.2, 10, 10);
+  opacity: 0.7;
+}
+.matrix .origin {
+  position: absolute;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* 3D transform
+  - Rotate 
+  (X, Y, Z)
+  - translate
+  - Perspective => هاد لعنصر الاب | المسافة يلي بيني وبين العنصر
+  - Perspective origin => نفس ترانسفورم اريجن يعني هي نقطة المنشأ يعني المركز | بينحط عند العنصر الاب
+  - Backface-visibility يعني اذا خليت العنصر يعمل روتيت بدك اليوزر يشوفه ولا لا 
+  Default => visible
+  - Transform-style => Default => flat | preserve-3d اذا بدك يحفظ مكانه بالثري دي حط 
+  - Flip Product */
+.trans3d {
+  background-color: #ddd;
+  width: 220px;
+  height: 220px;
+  font-weight: bold;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trans3d span {
+  background-color: #ca4747;
+  width: 90%;
+  height: 90%;
+  color: white;
+  font-weight: bold;
+  margin: 20px auto;
+  transform: none;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  position: relative;
+}
+.trans3d span:hover {
+  transform: rotate3d(0, 1, 0, 90deg);
+  transform-origin: left top;
+  opacity: 0.7;
+}
+.trans3d .origin {
+  position: absolute;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contener {
+  margin: 40px auto;
+  padding: 10px;
+  width: 200px;
+  perspective: 600px;
+}
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: right center;
+}
+.box .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  backface-visibility: hidden;
+}
+.box .front {
+  background-color: tomato;
+}
+.box .back {
+  background-color: #009688;
+  transform: rotateY(180deg);
+}
+.box:hover {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+/* ------------------------- */
+/* Animation
+  - Animation Name => اسم الانيميشن
+  - Animation Duration => الوقت يلي بياخده عشان يساويه
+  - Iteration Count => عدد التكرار | بتقدر تقوله 1 يعني مره و2 يعني مرتين او
+    infinite بتقدر الا مالا نهاية 
+  - Timing Function => طريقة الحركة مثل ايزي ايز
+  - Spinner Loading 
+  - Direction => اتجاه الانميشن اذا بدك اياه يبدأ بالعكس او اذا بدك اياه يبدا بالعكس بعدين الطبيعي 
+  - Delay => الوقت قبل ما يشتغل الانيميشن وبيقبل قيمة سالبة
+  - Fill-Mode => forword => بياخد اخر لون مثلا من الانيميشن | Backword => بياخد الستايل تبع اول واحد موجود 
+    both => يعني بياخد الاتنين 
+  - Play-State => اذا بدك الانيميشن يوقف
+  - Shorthand => animation => هي اختصار لكلشي */
+.animation {
+  width: 200px;
+  height: 200px;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  color: white;
+  font-size: 2em;
+  /* Animation Name => اسم الانيميشن */
+  animation-name: change-color;
+  /* Animation Duration => الوقت يلي بياخده عشان يساويه */
+  animation-duration: 10s;
+}
+@keyframes change-color {
+  0% {
+    background-color: teal;
+  }
+  30% {
+    background-color: tomato;
+  }
+  60% {
+    background-color: #0c0440;
+  }
+  80% {
+    background-color: cornflowerblue;
+  }
+  100% {
+    background-color: teal;
+  }
+}
+.loading {
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 5px solid seagreen !important;
+  border-left-color: transparent !important;
+  /* اسم الانيميشن */
+  animation-name: spin;
+  /* المدة الزمنية */
+  animation-duration: 1s; /* عدد التكرار */
+  animation-iteration-count: infinite;
+  /* شكل الحركة */
+  animation-timing-function: ease;
+  /* بيبدأ الانيميشن بالعكس */
+  animation-direction: reverse;
+  /* ثانيتين قبل ما يبدأ الانميشن */
+  animation-delay: 2s;
+}
+.loading:hover {
+  animation-play-state: paused;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* تطبيق سريع */
+.load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.load div {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(19, 19, 19);
+  border-radius: 50%;
+  border: none !important;
+  margin: 0 5px;
+  
+  animation-name: animation-01;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.load .two {
+  animation-delay: 0.3s;
+}
+.load .three {
+  animation-delay: 0.6s;
+}
+
+@keyframes animation-01 {
+  to {
+    opacity: 0.2;
+    transform: translateY(-20px);
+  }
+}
+
+
+/* 
+  Css Selectors
+  - * => يعني لكل شي
+  - Element => [p, div, h2 . .] 
+  - Element OtherElement => div p
+  - .class-name
+  - #id-name
+  - .parent .child
+  - .class-one.class-two
+  - .class-name div, .class-name p
+  - Element.class-name
+  - .parent > .child => Direct Child
+  ============
+  == Part 2 ==
+  ============
+  - Element + Other Element => [div + p]
+  - Element ~ Other Elements => [p ~ div]
+  - [Attribute]
+  - Element[Attribute]
+  - [Attribute=Value]
+  - Element[Attribute=>Value] => input[type="submit"]
+  - [Attribute~=Value] => Contains A Word
+  - [Attribute^=Value] => Start With A String
+  ============
+  == Part 3 ==
+  ============
+  - :first-child => بس للاول عنصر
+  - :Last-child => بس للعنصر الاخير
+  - :first-of-type => لاول من نوع العنصر 
+  - :last-of-type => لاخر نوع من العنصر 
+  - :only-child => بس للعنصر الابن لازم هو الابن الوحيد الموجود
+  - :only-of-type => الابن الوحيد من نوعه
+  ============
+  == Part 4 ==
+  ============
+  - :not(selectors) => كلشي بيتلون الا يلي داخل القوسين
+  - :nth-child(n) => من رقمه | :nth-child(even) => للارقام الزوجيه | :nth-child(odd) => للارقام الفردية
+  - :nth-last-child (n) => من اخر عنصر
+  - nth-of-type(n) => التحكم من نفس نوع العنصر بالرقم 
+  - nth-last-of-type(n) =>  من الاخر التحكم من نفس نوع العنصر بالرقم 
+  ============
+  == Part 4 ==
+  ============
+  - :root 
+  - :checked
+  - :empty
+  - :disabled
+  - :required
+  - :focus
+  - ::selection
+  - ::placeholder
+*/
+
+input:required + span::before {
+  content: "*";
+  color: red;
+}
+input::placeholder {
+  color: lightseagreen;
+}
+.test-input:focus {
+  background-color: black;
+  color: white;
+  border: #f35246;
+}
+.test-input {
+  border: none;
+  border-bottom: 1px solid blue;
+}
+/* ------------ */
+/* 
+  Media Queries
+  Responsive Design
+  - Concept Of Width
+  - Mobile
+  - Small Screens
+  - Medium Screens
+  - Large Screens
+  - Future Updates
+*/
+
+.maedia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.maedia div {
+  padding: 10px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+/* امثلة :مقدمة */
+@media print {
+  .maedia > div {
+    font-size: 30px;
+  }
+}
+@media print {
+  .maedia > div:first-child {
+    display: none;
+  }
+}
+/* يعني اول ما بتصغر الصفحة لل 1000  بكسل بيصير لون الخلفية ازرق */
+@media (max-width: 1000px) {
+  .maedia > div {
+    background-color: teal;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .maedia > div {
+    color: black;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+}
+
+/* Small Screens */
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Medium Screens */
+
+@media (min-width: 992px) {
+}
+
+/* Large Screens */
+
+@media (min-width: 1200px) {
+}
+
+/* Custom */
+
+@media (max-width: 1199px) {
+}
+
+/* 
+  Create Your Framework
+*/
+
+.framework {
+  position: relative;
+  background-color: #eee;
+  width: 1200px;
+  height: 200px;
+  margin: 20px auto;
+}
+.framework div {
+  background-color: green;
+  color: white;
+}
+.product01 {
+  background-color: red;
+  color: white;
+  margin: 20px auto;
+  cursor: pointer;
+}
+.product01:hover {
+  opacity: 0.8;
+}
+
+/* هون بتعمل فريم وورك بس للاشياء المتكررة */
+.center-position {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* بس بتحطها ككلاس وببتفعل */
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* بس بتحطها ككلاس وببتفعل */
+.circle-100 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/* بس بتحطها ككلاس وببتفعل */
+.circle-200 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  }
+/* بس بتحطها ككلاس وببتفعل */
+                              
+/* 
+  Css Global Values
+  - inherit => بيورث الاشياء من العنصر الاب
+  - initial => Defaulr value يعني بترجعها لأصلها
+  - unset 
+  ---> If Inherit => inherit
+  ---> If Not => initial
+  - revert CSS Level [4] => User Agent بيرجع تنسيقات الـ 
+  all => كل شيء
+*/
